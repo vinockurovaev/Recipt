@@ -18,7 +18,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Image  Margin="10"/>
+            <Image  Margin="10" Source="Resources/nyam-nyam.png"/>
 
             <Grid Grid.Row="1" Background="{StaticResource MainPink}">
                 <StackPanel>
