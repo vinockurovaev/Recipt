@@ -24,5 +24,25 @@ namespace Recept
         {
             InitializeComponent();
         }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCaptcha_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnIngredients_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnDishes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

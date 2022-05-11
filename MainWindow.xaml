@@ -7,6 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Image  Margin="10"/>
+
+            <Grid Grid.Row="1" Background="{StaticResource MainPink}">
+                <StackPanel>
+                    <Button x:Name="BtnDishes" Click="BtnDishes_Click">Блюда</Button>
+                    <Button x:Name="BtnIngredients" Click="BtnIngredients_Click">Ингредиенты</Button>
+                    <Button x:Name="BtnCaptcha" Click="BtnCaptcha_Click">Капча</Button>
+                </StackPanel>
+                <Button x:Name="BtnExit" Click="BtnExit_Click" VerticalAlignment="Bottom">Выход</Button>
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label FontSize="40" Margin="10" FontWeight="SemiBold" Content="{Binding ElementName=MainFrame, Path=Content.Title}"></Label>
+            <Grid Background="{StaticResource MainOrange}" Height="15" VerticalAlignment="Bottom" Margin="10"></Grid>
+
+            <Frame Grid.Row="1" x:Name="MainFrame" Margin="10" NavigationUIVisibility="Hidden"></Frame>
+        </Grid>
     </Grid>
 </Window>
